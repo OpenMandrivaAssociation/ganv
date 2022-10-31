@@ -60,7 +60,7 @@ developing applications that use %{name}.
 %files
 %doc NEWS
 %license COPYING
-%{_bindir}/ganv_bench
+#{_bindir}/ganv_bench
 
 %files -n %{libname}
 %{_libdir}/lib%{name}-%{major}.so.*
