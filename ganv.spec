@@ -14,12 +14,13 @@ Group:          Development/Libraries/C and C++
 Url:            http://drobilla.net/software/ganv
 Source0:        http://download.drobilla.net/ganv-%{version}.tar.bz2
 
-BuildRequires: meson
+BuildRequires:  meson
 BuildRequires:  python
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtkmm-2.4)
 BuildRequires:  pkgconfig(libgvc)
+BuildRequires:  gettext-devel
 
 Requires:	      %{libname} =  %{EVRD}
 
