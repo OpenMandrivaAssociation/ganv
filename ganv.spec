@@ -14,6 +14,7 @@ Group:          Development/Libraries/C and C++
 Url:            http://drobilla.net/software/ganv
 Source0:        http://download.drobilla.net/ganv-%{version}.tar.bz2
 
+BuildRequires: meson
 BuildRequires:  python
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(gtk+-2.0)
@@ -48,15 +49,11 @@ developing applications that use %{name}.
 %setup -q
 
 %build
-./waf --libdir=%{_libdir} --prefix=%{_prefix} configure
-./waf
+%meson
+%meson_build
 
 %install
-./waf --destdir=%{buildroot} install
-install -d %{buildroot}%{_libdir}/
-
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%meson_install
 
 %files
 %doc NEWS
