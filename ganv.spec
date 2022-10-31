@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtkmm-2.4)
 BuildRequires:  pkgconfig(libgvc)
+BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  gettext-devel
 
 Requires:	      %{libname} =  %{EVRD}
