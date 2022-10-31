@@ -6,7 +6,7 @@
 %define develname %mklibname ganv -d
 
 Name:           ganv
-Version:        1.8.0
+Version:        1.8.2
 Release:        1
 Summary:        Interactive Gtk canvas widget for graph-based interfaces
 License:        GPL-3.0-or-later
