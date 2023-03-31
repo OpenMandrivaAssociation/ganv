@@ -7,7 +7,7 @@
 
 Name:           ganv
 Version:        1.8.2
-Release:        1
+Release:        2
 Summary:        Interactive Gtk canvas widget for graph-based interfaces
 License:        GPL-3.0-or-later
 Group:          Development/Libraries/C and C++
