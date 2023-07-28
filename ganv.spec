@@ -7,12 +7,12 @@
 
 Name:           ganv
 Version:        1.8.2
-Release:        2
+Release:        1
 Summary:        Interactive Gtk canvas widget for graph-based interfaces
 License:        GPL-3.0-or-later
 Group:          Development/Libraries/C and C++
 Url:            http://drobilla.net/software/ganv
-Source0:        http://download.drobilla.net/ganv-%{version}.tar.bz2
+Source0:        http://download.drobilla.net/ganv-%{version}.tar.xz
 
 BuildRequires:  meson
 BuildRequires:  python
