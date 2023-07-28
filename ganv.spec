@@ -64,6 +64,7 @@ developing applications that use %{name}.
 
 %files -n %{libname}
 %{_libdir}/lib%{name}-%{major}.so.*
+%{_libdir}/girepository-1.0/Ganv-1.0.typelib
 
 %files -n %{develname}
 %doc README.md
@@ -71,3 +72,4 @@ developing applications that use %{name}.
 %{_includedir}/%{name}-%{major}
 %{_libdir}/lib%{name}-%{major}.so
 %{_libdir}/pkgconfig/*.pc
+%{_datadir}/gir-1.0/Ganv-1.0.gir
