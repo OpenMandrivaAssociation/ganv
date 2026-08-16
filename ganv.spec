@@ -21,8 +21,6 @@ BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtkmm-2.4)
 BuildRequires:  pkgconfig(libgvc)
-BuildRequires:  pkgconfig(gobject-introspection-1.0)
-BuildRequires:  %{_lib}harfbuzz-gir-devel
 BuildRequires:  gettext-devel
 
 Requires:	      %{libname} =  %{EVRD}
@@ -53,7 +51,8 @@ developing applications that use %{name}.
 %setup -q
 
 %build
-%meson
+# g-ir-scanner --warn-error cannot find cairo.h through the Gtk-2.0 GIR stack
+%meson -Dgir=disabled
 %meson_build
 
 %install
@@ -66,7 +65,6 @@ developing applications that use %{name}.
 
 %files -n %{libname}
 %{_libdir}/lib%{name}-%{major}.so.*
-%{_libdir}/girepository-1.0/Ganv-1.0.typelib
 
 %files -n %{develname}
 %doc README.md
@@ -74,4 +72,3 @@ developing applications that use %{name}.
 %{_includedir}/%{name}-%{major}
 %{_libdir}/lib%{name}-%{major}.so
 %{_libdir}/pkgconfig/*.pc
-%{_datadir}/gir-1.0/Ganv-1.0.gir
