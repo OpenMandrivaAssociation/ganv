@@ -22,7 +22,7 @@ BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gtkmm-2.4)
 BuildRequires:  pkgconfig(libgvc)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
-BuildRequires:  /usr/share/gir-1.0/HarfBuzz-0.0.gir
+BuildRequires:  %{_lib}harfbuzz-gir-devel
 BuildRequires:  gettext-devel
 
 Requires:	      %{libname} =  %{EVRD}
